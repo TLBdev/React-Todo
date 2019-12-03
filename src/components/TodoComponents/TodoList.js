@@ -7,7 +7,7 @@ const ToDoList = props => {
             {props.toDos.map(i => (
                 <ToDo changeStatus={props.changeStatus} key={i.id} item={i} />
             ))}
-            <button>Remove Completed</button>
+            <button onClick={props.clearCompleted}>Remove Completed</button>
         </div>
     )
 }

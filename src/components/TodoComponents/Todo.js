@@ -1,13 +1,13 @@
 import React from 'react';
-
+import './Todo.css'
 const ToDo = props => {
-    const handleClick = (item, e) => {
+    const handleClick = (e) => {
         console.log(e.target.parentElement.id)
         props.changeStatus(e.target.parentElement.id)
-        console.log(item)
+
     }
     return (
-        <div onClick={handleClick} id={props.item.id}>
+        <div className={props.item.completed ? 'completed' : ''} onClick={handleClick} id={props.item.id}>
             <p>{props.item.task}</p>
         </div>
     );
